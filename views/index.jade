@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  h1 #{title}
+  - for(var i=0;i<10;i++)
+    if(i%2===0 || i%3===0)
+      p 这就是：#{i}
+    else
+      p.one 11
+  h1 #{title}
+  - var code=111;
+  h1.h1(data-t={'t':'#{dataa}'}) #{code+title}
+  form(method="post", action="http://localhost:3000/a", enctype="multipart/form-data")
+    span 请选择要上传的文件
+    input(type="file" name="filee")
+    input(type="text", value="提交",name="aa")
+    input(type="submit", value="提交")
+  p Welcome to #{title} &nbsp;&nbsp;&nbsp;&nbsp;#{title}#{title}
+  - var a;
+  - if(1)
+    script.
+      $(function(){
+
+      })
+      console.log(22);
+      console.log(22);
+      console.log(22);
+  div(style={'color':'red'})
+    p Welcome to #{title} &nbsp;&nbsp;&nbsp;&nbsp;#{title}#{title}
+  div(style={'color': 'green','margin-top':'222px','background':'blue','display':'inline-block'})
+    p Welcome to #{title} &nbsp;&nbsp;&nbsp;&nbsp;#{title}#{title}
+    p(style={'margin-top':'33px'}) Welcome to #{title} &nbsp;&nbsp;&nbsp;&nbsp;#{title}#{title}
+    a(href!="http://www.qq.com",style={'display':'block'}) 我是qq
